@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- firebase  -->
+    
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBq6Hh5NTx-o6zzOvb8HKXClECobZ6FXVQ",
+    authDomain: "event-planner-waqar.firebaseapp.com",
+    databaseURL: "https://event-planner-waqar.firebaseio.com",
+    projectId: "event-planner-waqar",
+    storageBucket: "event-planner-waqar.appspot.com",
+    messagingSenderId: "578222618804"
+  };
+  firebase.initializeApp(config);
+</script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
@@ -49,7 +64,9 @@
                                         <!-- Button -->
     
                                         <div class="col-sm-12 controls">
-                                          <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+    <input  type="submit" class="btn btn-success" name="remember" value="Login"> 
+                                                
+                <!-- <a id="btn-login" href="#" class="btn btn-success">Login  </a> -->
                                           <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
     
                                         </div>
@@ -92,26 +109,26 @@
                                     <div class="form-group">
                                         <label for="email" class="col-md-3 control-label">Email</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                            <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
                                         </div>
                                     </div>
                                         
                                     <div class="form-group">
                                         <label for="firstname" class="col-md-3 control-label">First Name</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                            <input type="text" class="form-control" name="firstname" placeholder="First Name" id="firstname">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="lastname" class="col-md-3 control-label">Last Name</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password" class="col-md-3 control-label">Password</label>
                                         <div class="col-md-9">
-                                            <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                            <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password">
                                         </div>
                                     </div>
                                         
@@ -119,7 +136,7 @@
                                     <div class="form-group">
                                         <!-- Button -->                                        
                                         <div class="col-md-offset-3 col-md-9">
-                                            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                            <button  type="button"  class="btn btn-info" onclick="submit1()" >&nbsp Sign Up</button>
                                             <span style="margin-left:8px;">or</span>  
                                         </div>
                                     </div>
@@ -144,7 +161,9 @@
              </div> 
         </div>
         
+
 </body>
+<script src="Js./app.js"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
