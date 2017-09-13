@@ -25,7 +25,7 @@ document.getElementById('loginform')
                     .once('value', function (snapshot) {
                         var convert = JSON.stringify(snapshot.val())
                         localStorage.setItem('loggedInUser', convert)
-                        location = 'Js/skdh.html'
+                        location = 'Events Files/MyEvents.html'
                         console.log(convert)
                     })
             })
